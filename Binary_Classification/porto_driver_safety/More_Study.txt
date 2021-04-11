@@ -1,0 +1,27 @@
+
+pairplot 코드에러랑
+smoothing 기법? noise가 많다고 판단되는 이유?
+
+import warnings ==> warning 무시(내가 고치는거)
+metadata indentation(내가 고치는거)
+
+Hi. I'm recently working on [Porto Seguro Driver Safety Kaggle Notebook](https://www.kaggle.com/gpreda/porto-seguro-exploratory-analysis-and-prediction) .
+
+I want to ask about "Smoothing Part". [Here](https://www.kaggle.com/ogrellier/python-target-encoding-for-categorical-features)
+
+There seems insufficient details about code so I searched original paper. [Here](http://helios.mm.di.uoa.gr/~rouvas/ssi/sigkdd/sigkdd.vol3.1/barreca.pdf)
+
+And I found that 
+
+    smoothing = 1 / (1 + np.exp(-(averages["count"] - min_samples_leaf) / smoothing))
+
+equals to
+[this smoothing equation at paper][1]
+
+
+However I cannot understand meaning of this equation.
+
+
+
+
+  [1]: https://i.stack.imgur.com/Rcas9.png
